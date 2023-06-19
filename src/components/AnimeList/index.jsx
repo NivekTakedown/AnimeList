@@ -31,11 +31,11 @@ function AnimeList() {
             <div className="anime-list--container">
                 {animeList.map((anime) => (
                     <div className="anime-list--item" key={anime.node.id}>
-                        <Link to={`/anime/${anime.node.id}`}>
-                            <img src={anime.node.main_picture.large} alt={anime.node.title} />
-                            <h3>{anime.node.title}</h3>
-                        </Link>
+                        <img src={anime.node.main_picture.large} alt={anime.node.title} />
+                        <div className="anime-list--box">
+                        <h3>{anime.node.title}</h3>
                     </div>
+                </div>
                 ))}
             </div>
         </div>
